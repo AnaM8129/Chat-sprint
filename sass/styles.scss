@@ -1,0 +1,241 @@
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border;
+  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+body {
+  display: flex;
+}
+//ASIDE
+.aside {
+  background-color: $gris-claro;
+  width: 35%;
+  height: 100%;
+
+  //NAV ASIDE
+  &__nav {
+    background-color: $gris;
+    display: flex;
+    min-height: 50px;
+    border-right: 1px solid $gris-letra;
+    align-items: center;
+    &-figure {
+      width: 60px;
+      height: 60px;
+      margin: 10px;
+    }
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    &-p {
+      @extend .aside__section-name;
+      margin-top: 5%;
+    }
+  }
+  //FORM ASIDE
+  &__form {
+    background-color: $gris-claro;
+    min-height: 60px;
+    padding: 25px 15px 15px 15px;
+    position: relative;
+    &-img {
+      position: absolute;
+      margin-top: 1%;
+      margin-left: 2%;
+    }
+    &-input {
+      border: none;
+      padding: 10px 10px 10px 40px;
+      width: 70%;
+      border-radius: 20px;
+
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 15px;
+      }
+    }
+    &-submit {
+      border: 1px solid rgb(196, 196, 196);
+      padding: 5px;
+      border-radius: 5px;
+      color: $gris-letra;
+      margin-left: 4%;
+      font-size: 15px;
+
+      &:hover {
+        background-color: $gris-letra;
+        color: $blanco;
+        cursor: pointer;
+      }
+    }
+  }
+
+  //SECTION-MESSAGES ASIDE
+  &__section {
+    background-color: $blanco;
+    height: 73.8vh;
+    width: 100%;
+    overflow-y: scroll;
+    &-container {
+      display: flex;
+      padding: 10px;
+      min-height: 50px;
+      border-bottom: 1px solid $gris;
+
+      &:hover {
+        background-color: $gris;
+        cursor: pointer;
+      }
+    }
+    &-figure {
+      @extend .aside__nav-figure;
+    }
+    &-img {
+      @extend .aside__nav-img;
+    }
+    &-container2 {
+      margin-left: 5%;
+      width: 80%;
+      padding-top: 10px;
+      display: block;
+    }
+    &-name {
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 5%;
+      font-size: 17px;
+    }
+    &-message {
+      color: $gris-letra;
+    }
+  }
+}
+
+/////////////////////////////////////////////////MAIN/////////////////////////////////////////////
+.main {
+  width: 65%;
+  height: 100vh;
+  background-color: $blanco;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //MAIN NAV
+  &__nav {
+    background-color: $gris;
+    display: flex;
+    min-height: 50px;
+    border-right: 1px solid $gris-letra;
+    // align-items: flex-end;
+
+    &-figure {
+      @extend .aside__nav-figure;
+    }
+    &-img {
+      @extend .aside__nav-img;
+    }
+  }
+  &__container {
+    display: block;
+    margin-left: 2%;
+    height: 100%;
+    padding: 5px;
+    width: 80%;
+    margin: 10px;
+
+    &-name {
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 1%;
+      font-size: 17px;
+    }
+    &-line {
+      @extend .aside__section-message;
+      text-transform: uppercase;
+    }
+  }
+  //SECCIÓN PARA ESCRIBIR ALGO EN EL CHAT
+  &__section {
+    background-color: $gris;
+    display: flex;
+    padding-left: 50px;
+
+    &-figure {
+      padding-top: 1%;
+      margin-right: 20px;
+      padding: 20px 0 20px 0;
+    }
+
+    &-icon1 {
+      margin-right: 10px;
+    }
+    &-form {
+      display: flex;
+      width: 80%;
+      padding: 10px 0 10px 0;
+    }
+    &-input {
+      @extend .aside__form-input;
+      width: 80%;
+    }
+
+    &-button {
+      background-color: $verde-claro;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-left: 20px;
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(163, 250, 188);
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .aside {
+    width: 100%;
+  }
+  .aside__form-input {
+    width: 50%;
+  }
+}
+.filter {
+  display: none;
+}
+
+#messages-container {
+  padding: 20px;
+  width: 95%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+article {
+  background-color: $verde-claro;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+@media (max-width: 480px) {
+  .main {
+    display: none;
+  }
+  .aside {
+    width: 100%;
+  }
+}

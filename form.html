@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./sass/form.css" />
+    <title>Formulario de ingreso</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__section1">
+        <h1 class="main__section1-h1">¡Bienvenido!</h1>
+        <h2 class="main__section1-h2">Crea una cuenta</h2>
+        <figure class="main__section1-figure">
+          <img
+            class="main__section1-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/340px-Default_pfp.svg.png"
+            alt="icon-user"
+          />
+        </figure>
+        <div class="main__section1-container">
+          <p class="main__section1-p">¿Ya tienes una cuenta?</p>
+          <a class="main__section1-signin" href="./logIn.html"
+            >Iniciar sesión</a
+          >
+        </div>
+      </section>
+      <section class="main__section2">
+        <form class="main__section2-form" id="form">
+          <input
+            type="text"
+            class="main__section2-input"
+            id="name"
+            placeholder="Ingrese su nombre"
+          />
+          <!-- <p class="error"></p> -->
+          <input
+            type="number"
+            class="main__section2-input"
+            id="cellphone"
+            placeholder="Ingrese su número de celular"
+          />
+          <input
+            type="password"
+            class="main__section2-input"
+            id="password"
+            placeholder="Ingrese su contraseña"
+          />
+
+          <input
+            type="url"
+            class="main__section2-input"
+            id="avatar"
+            placeholder="Ingresa la URL de la imagen"
+          />
+
+          <textarea
+            class="main__section2-texttarea"
+            name="Comentario"
+            placeholder="Ingresa un comentario"
+            id="frase"
+          ></textarea>
+
+          <button class="main__section2-button" type="submit">Ingresar</button>
+        </form>
+      </section>
+    </main>
+    <script src="./scripts/form.js" type="module"></script>
+  </body>
+</html>

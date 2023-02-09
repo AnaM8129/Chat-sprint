@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./sass/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <aside class="aside">
+      <nav class="aside__nav">
+        <!-- <figure class="aside__nav-figure">
+          <img
+            class="aside__nav-img"
+            src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="user"
+          />
+        </figure>
+        <p >Nombre</p> -->
+      </nav>
+      <form class="aside__form">
+        <img class="aside__form-img" src="./img/search.svg" alt="buscar-icon" />
+        <input
+          id="input-search"
+          class="aside__form-input"
+          type="text"
+          placeholder="Buscar en el chat"
+        />
+      </form>
+      <section class="aside__section">
+        <div class="aside__section-container">
+          <!-- <figure class="aside__section-figure">
+            <img
+              class="aside__section-img"
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+              alt="chat-user"
+            />
+          </figure>
+          <div class="aside__section-container2">
+            <p class="aside__section-name">Inicia una conversación</p>
+            <p class="aside__section-message">Último mensaje</p>
+          </div> -->
+        </div>
+      </section>
+    </aside>
+    <main class="main">
+      <nav class="main__nav">
+        <figure class="main__nav-figure">
+          <img
+            class="main__nav-img"
+            src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="user"
+          />
+        </figure>
+        <div class="main__container">
+          <p class="main__container-name">Ruben</p>
+          <p class="main__container-line">En línea</p>
+        </div>
+      </nav>
+      <section id="messages-container">
+        <!-- <article>Este es un mensaje</article>
+        <article>Este es otro mensaje</article> -->
+      </section>
+
+      <section class="main__section">
+        <figure class="main__section-figure">
+          <img class="main__section-icon1" src="./img/smile.svg" alt="icon" />
+          <img src="./img/paperclip.svg" alt="icon" />
+        </figure>
+        <form class="main__section-form" id="form-message">
+          <input
+            id="input-message"
+            class="main__section-input"
+            type="text"
+            placeholder="Escribe un mensaje"
+          />
+          <button class="main__section-button">
+            <img
+              class="main__section-iconSend"
+              src="./img/send.svg"
+              alt="icon"
+            />
+          </button>
+        </form>
+      </section>
+    </main>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
